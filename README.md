@@ -1,7 +1,5 @@
 ﻿# Purple-Team Emulation: Artefacts and Detection
 
-## Week 4 — Specialist Advanced Build
-
 ### Project Overview
 
 This project demonstrates a controlled purple-team emulation and detection workflow based on MITRE ATT&CK techniques. The objective was to generate observable Windows endpoint telemetry, identify the artefacts left behind by controlled activity, and develop detection logic using Sysmon and Sigma.
