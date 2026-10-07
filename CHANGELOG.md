@@ -1,6 +1,6 @@
 ﻿# Changelog
-
-## [Week 4] - 2026-10-05
+ 
+## [Detection Lab] - 2026-10-05
 
 ### Added
 - Installed and enabled Microsoft Sysinternals Sysmon.
