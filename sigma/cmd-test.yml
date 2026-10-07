@@ -1,0 +1,20 @@
+title: Purple Team Command Execution Test
+id: 7f3a2c91-5d64-4e8b-a721-9c6f0d3b5842
+status: test
+description: Detects the controlled command execution used for Week 4 detection validation.
+author: Alishba Jaffri
+date: 2026-10-05
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  selection:
+    ParentImage|endswith: '\cmd.exe'
+    ParentCommandLine|contains: 'PURPLE_TEAM_DISCOVERY_TEST'
+  condition: selection
+falsepositives:
+  - Authorized testing and administrative command execution
+level: low
+tags:
+  - attack.execution
+  - attack.t1059.003

@@ -1,0 +1,20 @@
+title: Purple Team PowerShell Test Detection
+id: 8c5d9a6e-1c42-4b9d-a1e7-4f3c8b2d6a91
+status: test
+description: Detects the controlled PowerShell execution used during Week 4 purple-team validation.
+author: Alishba Jaffri
+date: 2026-10-05
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  selection:
+    ParentImage|endswith: '\powershell.exe'
+    ParentCommandLine|contains: 'PURPLE_TEAM_TEST'
+  condition: selection
+falsepositives:
+  - Authorized purple-team testing
+level: low
+tags:
+  - attack.execution
+  - attack.t1059.001
